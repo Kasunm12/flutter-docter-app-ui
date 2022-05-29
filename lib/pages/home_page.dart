@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors.deepPurple[600],
+                    color: Colors.deepPurple[300],
                     borderRadius: BorderRadius.circular(12)
                   ),
                   child: Icon(
@@ -138,7 +138,32 @@ class _HomePageState extends State<HomePage> {
               ]),
             ),
           ),
+
+          //=====================================================================================================
           //search bar
+
+          SizedBox(height: 25),
+
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Container(
+                // padding: EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple[100],
+                  borderRadius: BorderRadius.circular(12),
+                  ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.search),
+                    // prefixIconColor: Colors.red,
+                    // theme: ThemeData(primarySwatch: Colors.red),
+                    border: InputBorder.none,
+                    hintText: "Serach",
+                  ),
+                ),
+              ),
+            ),
           //horizontal listview -> categories
           //vertical partner list
         ],
