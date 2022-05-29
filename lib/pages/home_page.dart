@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors.deepPurple[200],
+                    color: Colors.deepPurple[600],
                     borderRadius: BorderRadius.circular(12)
                   ),
                   child: Icon(
@@ -64,10 +64,81 @@ class _HomePageState extends State<HomePage> {
                   ),
               ],
             ),
-          )
+          ),
       
-          //card->How do you feel?
-          //dearch bar
+       //======================================================================================================
+
+      SizedBox(height: 25),
+         // card->How do you feel?
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal:25.0),
+            child: Container(
+
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                      color: Colors.pink[100],
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+
+              child: Row(children: [
+                //animation or images
+                
+                 Container(
+                   height: 100,
+                   width: 100,
+                   color: Colors.deepPurple[200]),
+
+              SizedBox(
+                width: 20),
+                //how do you feel + button
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    Text(
+                      "How do you feel...?",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                      ),
+                      SizedBox(height: 8),
+                    Text(
+                      "Fill out your information right now...",                      
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                      ),
+                      ),
+
+
+                       SizedBox(height: 12),
+                    Container(
+                      padding: EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurple[600],
+                        borderRadius: BorderRadius.circular(12),
+                        ),
+                      child: Center(
+                      child: Text(
+                        "Get Started...!",
+                        style: TextStyle(
+                          color:Colors.white,
+                          fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        ),
+                      
+                      ),
+                      ),
+                      )
+                  ],
+                  ),
+                ),
+
+              ]),
+            ),
+          ),
+          //search bar
           //horizontal listview -> categories
           //vertical partner list
         ],
