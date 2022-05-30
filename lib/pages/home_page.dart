@@ -4,6 +4,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import '../util/category_card.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -54,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors.deepPurple[300],
+                    color: Colors.green[300],
                     borderRadius: BorderRadius.circular(12)
                   ),
                   child: Icon(
@@ -76,7 +78,7 @@ class _HomePageState extends State<HomePage> {
 
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                      color: Colors.pink[100],
+                      color: Colors.green[600],
                       borderRadius: BorderRadius.circular(12),
                     ),
 
@@ -100,6 +102,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
+                        color: Colors.white,
                       ),
                       ),
                       SizedBox(height: 8),
@@ -108,6 +111,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 12,
+                        color: Colors.white,
                       ),
                       ),
 
@@ -150,7 +154,7 @@ class _HomePageState extends State<HomePage> {
               child: Container(
                 // padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Colors.deepPurple[100],
+                  color: Colors.green[300],
                   borderRadius: BorderRadius.circular(12),
                   ),
                 child: TextField(
@@ -164,7 +168,32 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+
+            SizedBox(height: 25),
+            //=====================================================================================
           //horizontal listview -> categories
+          
+          Container(
+            height: 80,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+               CategoryCard(
+                 categoryName: "Docters",
+                 iconImagePath: "lib/icons/icon01.png",
+                 ), //1
+               CategoryCard(
+                 categoryName: "Surgeon",
+                 iconImagePath: "lib/icons/icon02.png",
+                 ), //2
+               CategoryCard(
+                 categoryName: "Pharmacist",
+                 iconImagePath: "lib/icons/icon03.png",
+               ), //3
+               
+              ],
+            ),
+            ),
           //vertical partner list
         ],
         ),
