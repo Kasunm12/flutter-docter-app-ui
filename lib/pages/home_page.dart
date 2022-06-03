@@ -3,6 +3,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:medical_ui/util/docter_card.dart';
 
 import '../util/category_card.dart';
 
@@ -194,7 +195,72 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             ),
+
+            SizedBox(height: 25),
           //vertical partner list
+
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal:25.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+
+                Text(
+                  "Docter List",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                  ),
+
+                  Text(
+                    "See all",
+                    style: TextStyle(
+                    
+                    fontSize: 16,
+                    color:  Colors.grey[600],
+                  ),
+                    
+                  ),
+                ],
+            ),
+          ),
+
+            SizedBox(height: 25),
+
+          Expanded(child: ListView(
+
+            scrollDirection: Axis.horizontal,
+            children: [
+              DocterCard(
+               docterImagePath: 'lib/images/docter1.jpg',
+               rating: '5.0',
+               docterName: 'Dr. Lakmini Dias',
+               docterTitle: 'M.B.B.S peradeniya',
+
+              ),
+
+               DocterCard(
+               docterImagePath: 'lib/images/docter2.jpg',
+               rating: '4.6',
+               docterName: 'Dr. Sachini Dias',
+               docterTitle: 'M.B.B.S Ruhuna',
+
+              ),
+
+               DocterCard(
+               docterImagePath: 'lib/images/docter2.jpg',
+               rating: '4.0',
+               docterName: 'Dr. Kasun Weerasekara',
+               docterTitle: 'M.B.B.S Moratuwa',
+
+              ),
+
+              
+            ],
+
+          )
+          ),
         ],
         ),
       ),
